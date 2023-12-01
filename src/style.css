@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --main-bg-color: #4C1D57;
+    --dot-bg-color: #808080;
+    --dot-border-color: #ffffff;
+    --correct-border-color: lightseagreen;
+    --correct-bg-color: lightseagreen;
+    --correct-text-color: #fff;
+    --incorrect-border-color: red;
+    --incorrect-bg-color: red;
+    --hover-border-color: rgb(236 72 153);
+    --hover-bg-color: rgb(236 72 153);
+    --dark-hover-border-color: pink;
+    --dark-hover-bg-color: pink;
+}
+
+.bg-image {
+    background-image: url('/src/assets/images/pattern-background-desktop-light.svg');
+    height: 100vh;
+}
+
+.bg-image.dark {
+    background-image: url('/src/assets/images/pattern-background-desktop-dark.svg');
+}
+
+input:checked ~ .dot {
+    transform: translateX(100%);
+    background-color: var(--dot-bg-color);
+    border: 4px solid var(--dot-border-color);
+}
+
+body.dark {
+    background-color: var(--main-bg-color);
+}
+
+.correct {
+    border-color: var(--correct-border-color);
+}
+
+.correct span {
+    background-color: var(--correct-bg-color);
+    color: var(--correct-text-color);
+}
+
+.incorrect {
+    border-color: var(--incorrect-border-color);
+}
+
+.incorrect span {
+    background-color: var(--incorrect-bg-color);
+    color: var(--correct-text-color);
+}
+
+label p:hover {
+    border: 2px dashed var(--hover-border-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    body.dark label p:hover {
+        border-color: var(--dark-hover-border-color);
+    }
+
+    body.dark label p:hover span {
+        background-color: var(--dark-hover-bg-color);
+        color: var(--correct-text-color);
+    }
+}
+
+
+@media screen and (max-width: 675px) {
+    .bg-image {
+        background-image: url('/src/assets/images/pattern-background-mobile-light.svg');
+    }
+
+    .bg-image.dark {
+        background-image: url('/src/assets/images/pattern-background-mobile-dark.svg');
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Quiz App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/dist/output.css">
+</head>
+<body class="bg-pink-200 bg-cover bg-no-repeat bg-image flex flex-col justify-center items-center p-4">
+    <main class="main">
+        <header>
+            <div class="mode flex items-center justify-center absolute top-10 right-10">
+                <label for="modeToggle" class="flex items-center cursor-pointer">
+                    <div class="mr-3 text-orange-400 font-medium">
+                        <span class="sun"><i class="bi bi-brightness-high-fill"></i></span>  
+                    </div>
+                    <div class="relative">
+                        <input id="modeToggle" type="checkbox" class="sr-only" />
+                        <div class="w-10 h-4 bg-pink-500 rounded-full shadow-inner"></div>
+                        <div class="dot absolute w-6 h-6 bg-orange-300 rounded-full border-4 border-blue-50 shadow -left-1 -top-1 transition"></div>
+                    </div>
+                    <div class="ml-3 text-gray-400 font-medium">
+                        <span class="moon"><i class="bi bi-moon-stars-fill"></i></span>
+                    </div>
+                </label>
+            </div>
+        </header>
+    
+        <section class="welcome-msg text-center gap-x-20 flex md:flex-row flex-col">
+            <article class="lg:mr-8">
+                <h1 class="text-4xl max-w-screen-md lg:text-left md:text-left dark:text-pink-100">Welcome to the <b class="font-bold text-purple-500 dark:text-pink-500">Frontend Quiz!</b></h1>
+                <p class="text-gray-500 dark:text-gray-300 mt-4 mb-6 lg:text-left md:text-left"><em>Pick a subject to get started.</em></p>
+            </article>
+          
+            <form class="subjects grid font-bold w-full">
+                <button class="text-left text-xl p-3 text-green-500 shadow-lg dark:shadow-purple-700/50 bg-pink-100 rounded-md dark:bg-purple-600 dark:text-green-300"><span class="icon p-1 mr-2 bg-opacity-50 rounded-sm bg-green-300"><i class="bi bi-code-slash"></i></span> HTML</button>
+                <button class="text-left text-xl p-3 text-pink-600 shadow-lg dark:shadow-purple-700/50 mt-4 bg-pink-100 rounded-md dark:bg-purple-600 dark:text-pink-200"><span class="icon p-1 mr-2 bg-opacity-50 rounded-sm bg-pink-400"><i class="bi bi-braces"></i></span> CSS</button>
+                <button class="text-left text-xl p-3 text-orange-500 shadow-lg dark:shadow-purple-700/50 mt-4 bg-pink-100 rounded-md dark:bg-purple-600 dark:text-orange-300"><span class="icon p-1 mr-2 bg-opacity-50 rounded-sm bg-orange-300"><i class="bi bi-filetype-js"></i></span> JavaScript</button>
+                <button class="text-left text-xl p-3 text-blue-600 shadow-lg dark:shadow-purple-700/50 mt-4 bg-pink-100 rounded-md dark:bg-purple-600 dark:text-blue-300"><span class="icon p-1 mr-2 bg-opacity-50 rounded-sm bg-blue-400"><i class="bi bi-universal-access-circle"></i></span> Accessibility</button>
+            </form>
+        </section>
+
+        <section class="quiz-body dark:text-white text-[#313E51]">
+            <header>
+                <div class="quiz-topic">
+                    <h2 class="topic-name font-semibold"><span class="icon quiz-icon"></span></h2>
+                </div>
+            </header>
+
+            <section class="flex justify-center flex-col">
+                <div class="top-header pt-8">
+                    <em><span class="question">Question <span id="question-number"></span></span></em>
+                    <span id="remaining-questions"></span>
+                    </span>
+                    <p class="mt-6 mb-6 font-bold" id="question-text"></p>
+                </div>
+                <div class="card-body">
+                    <form class="form-group grid mt-4 mb-6" id="answer-options">
+                    </form>
+                </div>
+            </section>
+        </section>
+    </main>
+    
+  <script src="./script.js"></script>
+</body>
+</html>

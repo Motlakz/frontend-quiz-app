@@ -58,18 +58,6 @@ label p:hover {
     border: 2px dashed var(--hover-border-color);
 }
 
-@media (prefers-color-scheme: dark) {
-    body.dark label p:hover {
-        border-color: var(--dark-hover-border-color);
-    }
-
-    body.dark label p:hover span {
-        background-color: var(--dark-hover-bg-color);
-        color: var(--correct-text-color);
-    }
-}
-
-
 @media screen and (max-width: 675px) {
     .bg-image {
         background-image: url('/src/assets/images/pattern-background-mobile-light.svg');

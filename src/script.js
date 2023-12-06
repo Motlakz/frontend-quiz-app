@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const optionTextNode = document.createTextNode(option);
         
             const optionElement = document.createElement('label');
-            optionElement.classList.add('block', 'text-lg', 'mb-2', 'font-bold', 'cursor-pointer', 'your-option-class');
+            optionElement.classList.add('block', 'text-lg', 'mb-2', 'font-bold', 'cursor-pointer', 'group');
         
             const radioInput = document.createElement('input');
             radioInput.classList.add('hidden');
@@ -56,10 +56,10 @@ document.addEventListener('DOMContentLoaded', function () {
         
             const optionContent = document.createElement('p');
             const spanElement = document.createElement('span');
-            spanElement.classList.add('p-3', 'mr-3', 'border', 'border-gray-500', 'dark:border-none', 'rounded-md', 'bg-[#F4F6FA]', 'text-gray-600');
+            spanElement.classList.add('p-3', 'group-hover:bg-pink-500', 'dark:group-hover:bg-pink-300', 'mr-3', 'border', 'border-gray-500', 'dark:border-none', 'rounded-md', 'bg-[#F4F6FA]', 'text-gray-600', 'group-hover:text-white');
             spanElement.appendChild(document.createTextNode(optionLabel));
             optionContent.appendChild(spanElement);
-            optionContent.classList.add('p-4', 'pl-2', 'border-2', 'border-transparent', 'rounded-md', 'bg-pink-100', 'shadow-lg', 'text-gray-800', 'dark:text-white', 'dark:shadow-purple-700/50', 'm-1', 'dark:bg-purple-600');
+            optionContent.classList.add('p-4', 'pl-2', 'group', 'border-2', 'dark:hover:border-pink-300', 'hover:border-pink-600', 'border-transparent', 'rounded-md', 'bg-pink-100', 'shadow-lg', 'text-gray-800', 'dark:text-white', 'dark:shadow-purple-700/50', 'm-1', 'dark:bg-purple-600');
             optionContent.appendChild(optionTextNode);
         
             optionElement.appendChild(radioInput);

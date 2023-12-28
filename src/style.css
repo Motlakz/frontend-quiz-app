@@ -36,17 +36,9 @@ body.dark {
     background-color: var(--main-bg-color);
 }
 
-.correct {
-    border-color: var(--correct-border-color);
-}
-
 .correct span {
     background-color: var(--correct-bg-color);
     color: var(--correct-text-color);
-}
-
-.incorrect {
-    border-color: var(--incorrect-border-color);
 }
 
 .incorrect span {
